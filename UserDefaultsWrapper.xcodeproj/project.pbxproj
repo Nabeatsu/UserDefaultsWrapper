@@ -10,6 +10,7 @@
 		B58F7DFA23EB03AB00F36609 /* UserDefaultsWrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B58F7DF023EB03AB00F36609 /* UserDefaultsWrapper.framework */; };
 		B58F7DFF23EB03AB00F36609 /* UserDefaultsWrapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58F7DFE23EB03AB00F36609 /* UserDefaultsWrapperTests.swift */; };
 		B58F7E0123EB03AB00F36609 /* UserDefaultsWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = B58F7DF323EB03AB00F36609 /* UserDefaultsWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B58F7E0B23EB044700F36609 /* WrappedUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58F7E0A23EB044700F36609 /* WrappedUserDefaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		B58F7DF923EB03AB00F36609 /* UserDefaultsWrapperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UserDefaultsWrapperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B58F7DFE23EB03AB00F36609 /* UserDefaultsWrapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsWrapperTests.swift; sourceTree = "<group>"; };
 		B58F7E0023EB03AB00F36609 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B58F7E0A23EB044700F36609 /* WrappedUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrappedUserDefaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				B58F7DF323EB03AB00F36609 /* UserDefaultsWrapper.h */,
 				B58F7DF423EB03AB00F36609 /* Info.plist */,
+				B58F7E0A23EB044700F36609 /* WrappedUserDefaults.swift */,
 			);
 			path = UserDefaultsWrapper;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				TargetAttributes = {
 					B58F7DEF23EB03AB00F36609 = {
 						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1130;
 					};
 					B58F7DF823EB03AB00F36609 = {
 						CreatedOnToolsVersion = 11.3;
@@ -195,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B58F7E0B23EB044700F36609 /* WrappedUserDefaults.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +345,7 @@
 		B58F7E0523EB03AB00F36609 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 77M5H986MA;
@@ -356,6 +362,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tanabe.nobuyuki.UserDefaultsWrapper;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +371,7 @@
 		B58F7E0623EB03AB00F36609 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 77M5H986MA;
@@ -388,6 +396,7 @@
 		B58F7E0823EB03AB00F36609 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 77M5H986MA;
 				INFOPLIST_FILE = UserDefaultsWrapperTests/Info.plist;
@@ -406,6 +415,7 @@
 		B58F7E0923EB03AB00F36609 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 77M5H986MA;
 				INFOPLIST_FILE = UserDefaultsWrapperTests/Info.plist;
