@@ -43,21 +43,3 @@ extension Optional: AnyOptional {
     var isNil: Bool { self == nil }
     
 }
-
-//@propertyWrapper struct UserDefaultsBacked<Value> {
-//    ...
-//
-//    var wrappedValue: Value {
-//        get { ... }
-//        set {
-//            if let optional = newValue as? AnyOptional, optional.isNil {
-//                storage.removeObject(forKey: key)
-//            } else {
-//                storage.setValue(newValue, forKey: key)
-//            }
-//        }
-//    }
-//}
-
-
-
